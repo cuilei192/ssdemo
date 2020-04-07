@@ -36,6 +36,7 @@ DROP TABLE IF EXISTS `sys_resource`;
 CREATE TABLE `sys_resource`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `resource_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `resource_key` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `type` int(11) NOT NULL,
   `url` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
@@ -45,9 +46,9 @@ CREATE TABLE `sys_resource`  (
 -- ----------------------------
 -- Records of sys_resource
 -- ----------------------------
-INSERT INTO `sys_resource` VALUES (1, '菜单1', 0, '/menu1');
-INSERT INTO `sys_resource` VALUES (2, '菜单2', 0, '/menu2');
-INSERT INTO `sys_resource` VALUES (3, '菜单3', 0, '/menu3');
+INSERT INTO `sys_resource` VALUES (1, '菜单1','menu1', 0, '/menu1');
+INSERT INTO `sys_resource` VALUES (2, '菜单2','menu2', 0, '/menu2');
+INSERT INTO `sys_resource` VALUES (3, '菜单3','menu3',0, '/menu3');
 
 -- ----------------------------
 -- Table structure for sys_role
